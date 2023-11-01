@@ -1,0 +1,49 @@
+def getMethodResult(request):
+    method = request.POST.get('method', False)
+
+    global df
+    global data_file
+    print('------------- Method ----------\n', method)
+    print('------------- filepath ----------\n', data_file)             
+
+    if method and data_file is not None:
+        print("Uploaded File Name --------  ", data_file)
+        file_name = ''
+        ext = ''
+        if method != 'ImageMasking':
+            data_file = str(data_file[0])
+            print('data_file', data_file)
+            file_name = data_file.split('/')[-1]
+
+            print("file_name", file_name)
+            ext = file_name.split(".")[1]
+     
+
+        if method == "Pseudonymized":
+            if ext == "csv":
+                df = pd.read_csv(data_file)
+                df_pi = pii_data(data=df)
+                lst = list(df_pi.columns)
+                print("Pil Columns --------  ", lst)
+                coltype(data=df_pi)
+                result_df = csv_txt_peso(data=df)
+                result_df.to_csv(r'.\pseudonymized_data.csv', index=False)
+                return JsonResponse({'columns': lst, 'data': result_df.head().to_json(orient='records'),
+                                     'file': 'pseudonymized_data.csv', 'method': method})
+
+            elif ext == "xlsx": 
+                df = pd.read_excel(data_file, engine='openpyxl')
+                df_pi = pii_data(data=df)
+                lst = list(df_pi.columns)
+                print("Pil Columns --------  ", lst)
+                coltype(data=df_pi)
+                result_df = csv_txt_peso(data=df)
+                result_df.to_csv(r'.\pseudonymized_data.csv', index=False)
+                return JsonResponse({'columns': lst, 'data': result_df.head().to_json(orient='records'),
+                                     'file': 'pseudonymized_data.csv', 'method': method})
+
+            else:
+                print("------- Choose correct file --------  ")
+                return JsonResponse({'data': 'Please Upload Correct File'})
+
+

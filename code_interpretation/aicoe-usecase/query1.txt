@@ -1,0 +1,22 @@
+SELECT * FROM products;
+SELECT customer_name, order_date
+FROM orders
+WHERE order_amount > 1000;
+
+
+SELECT DISTINCT category FROM products;
+
+
+SELECT product_name, price
+FROM products
+ORDER BY price DESC;
+
+
+SELECT product_name, stock_quantity
+FROM products
+LIMIT 10;
+
+SELECT customers.customer_name, orders.order_date, order_details.quantity
+FROM customers
+INNER JOIN orders ON customers.customer_id = orders.customer_id
+INNER JOIN order_details ON orders.order_id = order_details.order_id;

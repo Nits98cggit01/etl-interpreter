@@ -1,0 +1,157 @@
+
+#importing python packages
+from django.shortcuts import render
+from django.conf import settings
+from django.http import HttpResponse, JsonResponse, FileResponse
+import PyPDF2
+from cape_privacy.pandas import dtypes
+from cape_privacy.pandas.transformations import Tokenizer
+from cape_privacy.pandas.transformations import NumericPerturbation, NumericRounding
+from commonregex import date, time, phone, link, email, ip, price, credit_card, btc_address, street_address
+import spacy
+from spacy.cli.download import download
+from flair.data import Sentence
+from flair.models import SequenceTagger
+from segtok.segmenter import split_single
+import re
+import os
+import cv2
+import pickle
+import pytesseract
+import pandas as pd
+from pytesseract import Output
+import zipfile
+import pathlib
+
+#loading spacy model
+nlp = spacy.load("en_core_web_lg")
+
+#declaring variables
+filepath = ""
+data_file = []
+df1 = pd.DataFrame()
+original_df = pd.DataFrame()
+mapping_df = pd.DataFrame()
+
+data_object = []
+data_float = []
+data_int = []
+
+#compiling regular expressions
+link_2 = re.compile(r'(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})')
+price_INR = re.compile(r'(?:Rs\.?|INR)\s*(\d+(?:[.,]\d+)*)|(\d+(?:[.,]\d+)*)\s*(?:Rs\.?|INR)')
+
+#declaring list of regular expressions
+pi = [date, phone, time, price, price_INR, email, link_2, credit_card, street_address, btc_address, ip]
+
+#declaring dictionary
+my_dict = {
+    "dates": date,
+    "times": time,
+    "phones": phone,
+    "links": link,
+    "emails": email,
+    "ips": ip,
+    "prices": price,
+    "credit_cards": credit_card,
+    "btc_addresses": btc_address,
+    "street_addresses": street_address,
+}
+
+#declaring transformations
+tokenize_object = Tokenizer()
+perturb_int = NumericPerturbation(dtype=dtypes.Integer, min=-5, max=5)
+round_float = NumericRounding(dtype=dtypes.Float, precision=-2)
+
+#Defining a function to handle uploaded file
+def handle_uploaded_file(f):
+    #Declaring global variables
+    global data_file
+    #Opening the file in write binary mode
+    with open('PII/static/upload/' + f.name, 'wb') as destination:
+        #Iterating over the chunks of the file
+        for chunk in f.chunks():
+            #Writing the chunks to the file
+            destination.write(chunk)
+        #Declaring global variable
+        global filepath
+        #Assigning the filepath
+        filepath = './PII/static/upload/' + f.name
+        #Appending the filepath to the data_file list
+        data_file.append(filepath)
+
+        #Printing the filepath and data_file list
+        print('------------- filepath ----------\n', filepath)
+        print('------------- datapath ----------\n', data_file)
+
+# Get the method from the request
+def getMethodResult(request):
+    method = request.POST.get('method', False)
+
+    # Initialize global variables
+    global df
+    global data_file
+    print('------------- Method ----------\n', method)
+    print('------------- filepath ----------\n', data_file)             
+
+    # Check if method and data_file are not None
+    if method and data_file is not None:
+        print("Uploaded File Name --------  ", data_file)
+        file_name = ''
+        ext = ''
+        # Check if method is not ImageMasking
+        if method != 'ImageMasking':
+            data_file = str(data_file[0])
+            print('data_file', data_file)
+            # Get the file name
+            file_name = data_file.split('/')[-1]
+
+            print("file_name", file_name)
+            # Get the file extension
+            ext = file_name.split(".")[1]
+     
+
+        # Check if method is Pseudonymized
+        if method == "Pseudonymized":
+            # Check if file extension is csv
+            if ext == "csv":
+                # Read the csv file
+                df = pd.read_csv(data_file)
+                # Get the PII data
+                df_pi = pii_data(data=df)
+                # Get the list of columns
+                lst = list(df_pi.columns)
+                print("Pil Columns --------  ", lst)
+                # Get the column type
+                coltype(data=df_pi)
+                # Get the pseudonymized data
+                result_df = csv_txt_peso(data=df)
+                # Create a csv file
+                result_df.to_csv(r'.\pseudonymized_data.csv', index=False)
+                # Return the response
+                return JsonResponse({'columns': lst, 'data': result_df.head().to_json(orient='records'),
+                                     'file': 'pseudonymized_data.csv', 'method': method})
+
+            # Check if file extension is xlsx
+            elif ext == "xlsx": 
+                # Read the xlsx file
+                df = pd.read_excel(data_file, engine='openpyxl')
+                # Get the PII data
+                df_pi = pii_data(data=df)
+                # Get the list of columns
+                lst = list(df_pi.columns)
+                print("Pil Columns --------  ", lst)
+                # Get the column type
+                coltype(data=df_pi)
+                # Get the pseudonymized data
+                result_df = csv_txt_peso(data=df)
+                # Create a csv file
+                result_df.to_csv(r'.\pseudonymized_data.csv', index=False)
+                # Return the response
+                return JsonResponse({'columns': lst, 'data': result_df.head().to_json(orient='records'),
+                                     'file': 'pseudonymized_data.csv', 'method': method})
+
+            # If file extension is not csv or xlsx
+            else:
+                print("------- Choose correct file --------  ")
+                return JsonResponse({'data': 'Please Upload Correct File'})

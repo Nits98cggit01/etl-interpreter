@@ -1,0 +1,16 @@
+INS EXECUTIVE VISIT - Mumbai (21st August)
+
+A2B 	- Test case Generation	- UI ready
+A2B 	- SAS to PySpark	- UI ready
+A2B 	- Informatica to AWS Glue	- UI ready
+Gen AI 	- Digital Supply Chain (No UI - Neo4J Bloom) - Recording [Digitally visualising physical supply chain using Neo4J]
+A2B	- USQL to Synapse (Open AI used)	- No UI
+A2B 	- SAP BODS to PySpark	- No UI
+A2B	- DataStage to PySpark	- No UI
+A2B	- SSIS to ADF	- No UI
+Gen AI	- Vertiv AI
+Gen AI	- Career Framework
+Gen AI	-  
+
+
+ 

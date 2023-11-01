@@ -1,0 +1,116 @@
+from django.shortcuts import render
+from django.conf import settings
+from django.http import HttpResponse, JsonResponse, FileResponse
+import PyPDF2
+from cape_privacy.pandas import dtypes
+from cape_privacy.pandas.transformations import Tokenizer
+from cape_privacy.pandas.transformations import NumericPerturbation, NumericRounding
+from commonregex import date, time, phone, link, email, ip, price, credit_card, btc_address, street_address
+import spacy
+from spacy.cli.download import download
+from flair.data import Sentence
+from flair.models import SequenceTagger
+from segtok.segmenter import split_single
+import re
+import os
+import cv2
+import pickle
+import pytesseract
+import pandas as pd
+from pytesseract import Output
+import zipfile
+import pathlib
+
+
+nlp = spacy.load("en_core_web_lg")
+filepath = ""
+data_file = []
+df1 = pd.DataFrame()
+original_df = pd.DataFrame()
+mapping_df = pd.DataFrame()
+
+data_object = []
+data_float = []
+data_int = []
+link_2 = re.compile(r'(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})')
+price_INR = re.compile(r'(?:Rs\.?|INR)\s*(\d+(?:[.,]\d+)*)|(\d+(?:[.,]\d+)*)\s*(?:Rs\.?|INR)')
+pi = [date, phone, time, price, price_INR, email, link_2, credit_card, street_address, btc_address, ip]
+my_dict = {
+    "dates": date,
+    "times": time,
+    "phones": phone,
+    "links": link,
+    "emails": email,
+    "ips": ip,
+    "prices": price,
+    "credit_cards": credit_card,
+    "btc_addresses": btc_address,
+    "street_addresses": street_address,
+}
+tokenize_object = Tokenizer()
+perturb_int = NumericPerturbation(dtype=dtypes.Integer, min=-5, max=5)
+round_float = NumericRounding(dtype=dtypes.Float, precision=-2)
+
+
+def handle_uploaded_file(f):
+    global data_file
+    with open('PII/static/upload/' + f.name, 'wb') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
+        global filepath
+        filepath = './PII/static/upload/' + f.name
+        data_file.append(filepath)
+
+        print('------------- filepath ----------\n', filepath)
+        print('------------- datapath ----------\n', data_file)
+
+
+def getMethodResult(request):
+    method = request.POST.get('method', False)
+
+    global df
+    global data_file
+    print('------------- Method ----------\n', method)
+    print('------------- filepath ----------\n', data_file)             
+
+    if method and data_file is not None:
+        print("Uploaded File Name --------  ", data_file)
+        file_name = ''
+        ext = ''
+        if method != 'ImageMasking':
+            data_file = str(data_file[0])
+            print('data_file', data_file)
+            file_name = data_file.split('/')[-1]
+
+            print("file_name", file_name)
+            ext = file_name.split(".")[1]
+     
+
+        if method == "Pseudonymized":
+            if ext == "csv":
+                df = pd.read_csv(data_file)
+                df_pi = pii_data(data=df)
+                lst = list(df_pi.columns)
+                print("Pil Columns --------  ", lst)
+                coltype(data=df_pi)
+                result_df = csv_txt_peso(data=df)
+                result_df.to_csv(r'.\pseudonymized_data.csv', index=False)
+                return JsonResponse({'columns': lst, 'data': result_df.head().to_json(orient='records'),
+                                     'file': 'pseudonymized_data.csv', 'method': method})
+
+            elif ext == "xlsx": 
+                df = pd.read_excel(data_file, engine='openpyxl')
+                df_pi = pii_data(data=df)
+                lst = list(df_pi.columns)
+                print("Pil Columns --------  ", lst)
+                coltype(data=df_pi)
+                result_df = csv_txt_peso(data=df)
+                result_df.to_csv(r'.\pseudonymized_data.csv', index=False)
+                return JsonResponse({'columns': lst, 'data': result_df.head().to_json(orient='records'),
+                                     'file': 'pseudonymized_data.csv', 'method': method})
+
+            else:
+                print("------- Choose correct file --------  ")
+                return JsonResponse({'data': 'Please Upload Correct File'})
+
+

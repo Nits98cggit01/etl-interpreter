@@ -1,0 +1,9 @@
+SELECT
+  teams.team_name AS team_name,
+  projects.project_name AS project_name
+FROM TABLE teams
+INNER JOIN matches
+  ON teams.id = matches.team_id
+INNER JOIN matches
+  ON matches.project_id = projects.id
+ORDER BY teams.id;

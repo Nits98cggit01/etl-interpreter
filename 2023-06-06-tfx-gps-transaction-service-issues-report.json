@@ -1,0 +1,3686 @@
+{
+  "total": 66,
+  "p": 1,
+  "ps": 100,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 100,
+    "total": 66
+  },
+  "effortTotal": 335,
+  "issues": [
+    {
+      "key": "AYiLoJmGwGwxdG3jpfA0",
+      "rule": "java:S1128",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/TransactionApplication.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 5,
+      "hash": "f8e40c2543bdeeb61b46072ae8559fd5",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 7,
+        "endOffset": 59
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused import 'org.springframework.context.annotation.ComponentScan'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJlmwGwxdG3jpfAz",
+      "rule": "java:S4488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/CreditToCardApi.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 20,
+      "hash": "bc40674d3bd5e84e0db50c0efdc09ca4",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 2,
+        "endOffset": 16
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/CreditToCardApi.java",
+              "textRange": {
+                "startLine": 21,
+                "endLine": 21,
+                "startOffset": 34,
+                "endOffset": 52
+              },
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Replace \"@RequestMapping(method = RequestMethod.POST)\" with \"@PostMapping\"",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "spring"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJkKwGwxdG3jpfAu",
+      "rule": "java:S2293",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/HealthApiController.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 86,
+      "hash": "ba4e8882f8422512cbbeeac38807dda3",
+      "textRange": {
+        "startLine": 86,
+        "endLine": 86,
+        "startOffset": 51,
+        "endOffset": 59
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace the type specification in this constructor call with the diamond operator (\"<>\").",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJkKwGwxdG3jpfAv",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/HealthApiController.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 107,
+      "hash": "253c48bd58ed5c5c8de58f82c2a58a50",
+      "textRange": {
+        "startLine": 107,
+        "endLine": 108,
+        "startOffset": 28,
+        "endOffset": 55
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"gpApiConfig\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJk_wGwxdG3jpfAx",
+      "rule": "java:S4488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/RefundTransactionApi.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 20,
+      "hash": "a5b2f739b04cbf154586bdc9d3cafc51",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 2,
+        "endOffset": 16
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/RefundTransactionApi.java",
+              "textRange": {
+                "startLine": 21,
+                "endLine": 21,
+                "startOffset": 32,
+                "endOffset": 50
+              },
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Replace \"@RequestMapping(method = RequestMethod.POST)\" with \"@PostMapping\"",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "spring"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJkgwGwxdG3jpfAw",
+      "rule": "java:S4488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/TransactionApi.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 20,
+      "hash": "16d37dd9800a1bd0212ca28c07ddbede",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 2,
+        "endOffset": 16
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/TransactionApi.java",
+              "textRange": {
+                "startLine": 21,
+                "endLine": 21,
+                "startOffset": 34,
+                "endOffset": 52
+              },
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Replace \"@RequestMapping(method = RequestMethod.POST)\" with \"@PostMapping\"",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "spring"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJlUwGwxdG3jpfAy",
+      "rule": "java:S4488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/VoidTransactionApi.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 20,
+      "hash": "67946da10d9bc077bb579c5154585f50",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 2,
+        "endOffset": 16
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/VoidTransactionApi.java",
+              "textRange": {
+                "startLine": 21,
+                "endLine": 21,
+                "startOffset": 32,
+                "endOffset": 50
+              },
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Replace \"@RequestMapping(method = RequestMethod.POST)\" with \"@PostMapping\"",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "spring"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJjywGwxdG3jpfAt",
+      "rule": "java:S125",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/jpa/config/DataSourceConfig.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 25,
+      "hash": "80f2497f95a0d6de198a14cbf048e344",
+      "textRange": {
+        "startLine": 25,
+        "endLine": 25,
+        "startOffset": 4,
+        "endOffset": 56
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "This block of commented-out lines of code should be removed.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJdKwGwxdG3jpe_z",
+      "rule": "java:S4144",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/model/AuthorizationData.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 260,
+      "hash": "6d8c4ea5c6a52a52b5fec0cf54e63046",
+      "textRange": {
+        "startLine": 260,
+        "endLine": 260,
+        "startOffset": 15,
+        "endOffset": 42
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/model/AuthorizationData.java",
+              "textRange": {
+                "startLine": 164,
+                "endLine": 164,
+                "startOffset": 15,
+                "endOffset": 41
+              },
+              "msg": "original implementation",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Update this method so that its implementation is not identical to \"getGmParentGmTransactionId\" on line 164.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "",
+      "tags": [
+        "confusing",
+        "duplicate",
+        "suspicious"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJdKwGwxdG3jpe_0",
+      "rule": "java:S4144",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/model/AuthorizationData.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 340,
+      "hash": "2946aae3c0938afccae97e9e454cd89a",
+      "textRange": {
+        "startLine": 340,
+        "endLine": 340,
+        "startOffset": 15,
+        "endOffset": 34
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/model/AuthorizationData.java",
+              "textRange": {
+                "startLine": 180,
+                "endLine": 180,
+                "startOffset": 15,
+                "endOffset": 41
+              },
+              "msg": "original implementation",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Update this method so that its implementation is not identical to \"getGmThreeDsMessageVersion\" on line 180.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "",
+      "tags": [
+        "confusing",
+        "duplicate",
+        "suspicious"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJjYwGwxdG3jpfAq",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/GpPaymentService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 19,
+      "hash": "3f9850bb2d8c8f04cb6fa03c543c47ef",
+      "textRange": {
+        "startLine": 19,
+        "endLine": 20,
+        "startOffset": 25,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"response\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJjZwGwxdG3jpfAr",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/GpPaymentService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 27,
+      "hash": "875aa5eb3c154864d05e283b09692dce",
+      "textRange": {
+        "startLine": 27,
+        "endLine": 37,
+        "startOffset": 28,
+        "endOffset": 93
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"transaction\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJjZwGwxdG3jpfAs",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/GpPaymentService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 43,
+      "hash": "b77dbbbeefc36136a44f6cf3d18b18e6",
+      "textRange": {
+        "startLine": 43,
+        "endLine": 45,
+        "startOffset": 25,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"response\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_7",
+      "rule": "java:S6437",
+      "severity": "BLOCKER",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 87,
+      "hash": "291af4be249c301f3fb13b65062d41f0",
+      "textRange": {
+        "startLine": 87,
+        "endLine": 87,
+        "startOffset": 41,
+        "endOffset": 62
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Revoke and change this password, as it is compromised.",
+      "effort": "1h",
+      "debt": "1h",
+      "author": "",
+      "tags": [
+        "cwe",
+        "owasp-a2"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_8",
+      "rule": "java:S5542",
+      "severity": "CRITICAL",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 88,
+      "hash": "47e8be91416ddd9067088146f3c4b09f",
+      "textRange": {
+        "startLine": 88,
+        "endLine": 88,
+        "startOffset": 38,
+        "endOffset": 43
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a secure padding scheme.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "",
+      "tags": [
+        "cwe",
+        "owasp-a3",
+        "owasp-a6",
+        "owasp-m5",
+        "privacy",
+        "sans-top25-porous"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_9",
+      "rule": "java:S5547",
+      "severity": "CRITICAL",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 88,
+      "hash": "47e8be91416ddd9067088146f3c4b09f",
+      "textRange": {
+        "startLine": 88,
+        "endLine": 88,
+        "startOffset": 38,
+        "endOffset": 43
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a strong cipher algorithm.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "",
+      "tags": [
+        "cwe",
+        "owasp-a3",
+        "owasp-a6",
+        "owasp-m5",
+        "privacy",
+        "sans-top25-porous"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_-",
+      "rule": "java:S1481",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 90,
+      "hash": "b81b362cf09397ed53bac1e516f5f330",
+      "textRange": {
+        "startLine": 90,
+        "endLine": 90,
+        "startOffset": 10,
+        "endOffset": 19
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused \"encrypted\" local variable.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_2",
+      "rule": "java:S1854",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 90,
+      "hash": "b81b362cf09397ed53bac1e516f5f330",
+      "textRange": {
+        "startLine": 90,
+        "endLine": 90,
+        "startOffset": 20,
+        "endOffset": 62
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this useless assignment to local variable \"encrypted\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "",
+      "tags": [
+        "cert",
+        "cwe",
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpfAA",
+      "rule": "java:S1135",
+      "severity": "INFO",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 92,
+      "hash": "7070b9ee421ce52b0a94300bdc011420",
+      "textRange": {
+        "startLine": 92,
+        "endLine": 92,
+        "startOffset": 0,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Complete the task associated to this TODO comment.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "",
+      "tags": [
+        "cwe"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_3",
+      "rule": "java:S2147",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 94,
+      "hash": "29531161dc2732c39e7cc3326ebeeec6",
+      "textRange": {
+        "startLine": 94,
+        "endLine": 94,
+        "startOffset": 11,
+        "endOffset": 37
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 91,
+                "endLine": 94,
+                "startOffset": 4,
+                "endOffset": 3
+              },
+              "msg": "Combine with this catch",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Combine this catch with the one at line 91, which has the same body.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpfAC",
+      "rule": "java:S1135",
+      "severity": "INFO",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 95,
+      "hash": "7070b9ee421ce52b0a94300bdc011420",
+      "textRange": {
+        "startLine": 95,
+        "endLine": 95,
+        "startOffset": 0,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Complete the task associated to this TODO comment.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "",
+      "tags": [
+        "cwe"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_4",
+      "rule": "java:S2147",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 97,
+      "hash": "bbe26677006a71c93192e8d63ee08c10",
+      "textRange": {
+        "startLine": 97,
+        "endLine": 97,
+        "startOffset": 11,
+        "endOffset": 35
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 91,
+                "endLine": 94,
+                "startOffset": 4,
+                "endOffset": 3
+              },
+              "msg": "Combine with this catch",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Combine this catch with the one at line 91, which has the same body.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpfAE",
+      "rule": "java:S1135",
+      "severity": "INFO",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 98,
+      "hash": "7070b9ee421ce52b0a94300bdc011420",
+      "textRange": {
+        "startLine": 98,
+        "endLine": 98,
+        "startOffset": 0,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Complete the task associated to this TODO comment.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "",
+      "tags": [
+        "cwe"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_5",
+      "rule": "java:S2147",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 100,
+      "hash": "84e9c0cf9275b6bd10825c52badfaea4",
+      "textRange": {
+        "startLine": 100,
+        "endLine": 100,
+        "startOffset": 11,
+        "endOffset": 38
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 91,
+                "endLine": 94,
+                "startOffset": 4,
+                "endOffset": 3
+              },
+              "msg": "Combine with this catch",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Combine this catch with the one at line 91, which has the same body.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfSwGwxdG3jpfAG",
+      "rule": "java:S1135",
+      "severity": "INFO",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 101,
+      "hash": "7070b9ee421ce52b0a94300bdc011420",
+      "textRange": {
+        "startLine": 101,
+        "endLine": 101,
+        "startOffset": 0,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Complete the task associated to this TODO comment.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "",
+      "tags": [
+        "cwe"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfRwGwxdG3jpe_6",
+      "rule": "java:S2147",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 103,
+      "hash": "465721c73e54bd05afede6fda87c9847",
+      "textRange": {
+        "startLine": 103,
+        "endLine": 103,
+        "startOffset": 11,
+        "endOffset": 32
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 91,
+                "endLine": 94,
+                "startOffset": 4,
+                "endOffset": 3
+              },
+              "msg": "Combine with this catch",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Combine this catch with the one at line 91, which has the same body.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfSwGwxdG3jpfAI",
+      "rule": "java:S1135",
+      "severity": "INFO",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 104,
+      "hash": "7070b9ee421ce52b0a94300bdc011420",
+      "textRange": {
+        "startLine": 104,
+        "endLine": 104,
+        "startOffset": 0,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Complete the task associated to this TODO comment.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "",
+      "tags": [
+        "cwe"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfSwGwxdG3jpfAJ",
+      "rule": "java:S125",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 162,
+      "hash": "ccdc8baf2dc9f9b8378d7da40d4d80ff",
+      "textRange": {
+        "startLine": 162,
+        "endLine": 162,
+        "startOffset": 4,
+        "endOffset": 107
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "This block of commented-out lines of code should be removed.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfQwGwxdG3jpe_1",
+      "rule": "java:S2293",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 165,
+      "hash": "8307544cf134fdd7784af6db6c7000aa",
+      "textRange": {
+        "startLine": 165,
+        "endLine": 165,
+        "startOffset": 65,
+        "endOffset": 88
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace the type specification in this constructor call with the diamond operator (\"<>\").",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJfSwGwxdG3jpfAK",
+      "rule": "java:S3776",
+      "severity": "CRITICAL",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 332,
+      "hash": "93f751d99197296c6be374b201192f85",
+      "textRange": {
+        "startLine": 332,
+        "endLine": 332,
+        "startOffset": 14,
+        "endOffset": 31
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 346,
+                "endLine": 346,
+                "startOffset": 4,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 362,
+                "endLine": 362,
+                "startOffset": 3,
+                "endOffset": 5
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 364,
+                "endLine": 364,
+                "startOffset": 4,
+                "endOffset": 6
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 365,
+                "endLine": 365,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 368,
+                "endLine": 368,
+                "startOffset": 11,
+                "endOffset": 13
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 376,
+                "endLine": 376,
+                "startOffset": 5,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 381,
+                "endLine": 381,
+                "startOffset": 4,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 393,
+                "endLine": 393,
+                "startOffset": 4,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 401,
+                "endLine": 401,
+                "startOffset": 4,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 387,
+                "endLine": 387,
+                "startOffset": 3,
+                "endOffset": 5
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 387,
+                "endLine": 387,
+                "startOffset": 38,
+                "endOffset": 40
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 390,
+                "endLine": 390,
+                "startOffset": 5,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 404,
+                "endLine": 404,
+                "startOffset": 3,
+                "endOffset": 5
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 418,
+                "endLine": 418,
+                "startOffset": 2,
+                "endOffset": 4
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.",
+      "effort": "7min",
+      "debt": "7min",
+      "author": "",
+      "tags": [
+        "brain-overload"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJiZwGwxdG3jpfAl",
+      "rule": "java:S1172",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardReqValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 33,
+      "hash": "31fa77f07991e659c7ccf5fee5116dc3",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 35,
+        "endOffset": 55
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused method parameter \"xHSBCGlobalChannelId\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJgwwGwxdG3jpfAR",
+      "rule": "java:S1172",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 37,
+      "hash": "35aff29ceb1a5edceb27249317a461ec",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 35,
+        "endOffset": 55
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused method parameter \"xHSBCGlobalChannelId\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJgwwGwxdG3jpfAS",
+      "rule": "java:S1612",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 62,
+      "hash": "21fdfc26a0217a0b6fd64736bc4ee98f",
+      "textRange": {
+        "startLine": 62,
+        "endLine": 62,
+        "startOffset": 7,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this lambda with method reference 'request::getGpTransactionId'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "java8"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJh0wGwxdG3jpfAd",
+      "rule": "java:S2293",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 112,
+      "hash": "831e5e42af5f131b1f0727eb65687ffc",
+      "textRange": {
+        "startLine": 112,
+        "endLine": 112,
+        "startOffset": 72,
+        "endOffset": 102
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace the type specification in this constructor call with the diamond operator (\"<>\").",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJh0wGwxdG3jpfAe",
+      "rule": "java:S2293",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 114,
+      "hash": "8307544cf134fdd7784af6db6c7000aa",
+      "textRange": {
+        "startLine": 114,
+        "endLine": 114,
+        "startOffset": 65,
+        "endOffset": 88
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace the type specification in this constructor call with the diamond operator (\"<>\").",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJh0wGwxdG3jpfAf",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 235,
+      "hash": "41639ffdf856c239a0efd92eac3b2e28",
+      "textRange": {
+        "startLine": 235,
+        "endLine": 240,
+        "startOffset": 23,
+        "endOffset": 89
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"gpApiConfig\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJh0wGwxdG3jpfAg",
+      "rule": "java:S1126",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 320,
+      "hash": "2c67a4320ce77042a70df0aa2bb37d56",
+      "textRange": {
+        "startLine": 320,
+        "endLine": 320,
+        "startOffset": 2,
+        "endOffset": 4
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this if-then-else statement by a single return statement.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJh0wGwxdG3jpfAh",
+      "rule": "java:S1126",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 351,
+      "hash": "dcfda05e93c532c6829d736869314dde",
+      "textRange": {
+        "startLine": 351,
+        "endLine": 351,
+        "startOffset": 2,
+        "endOffset": 4
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this if-then-else statement by a single return statement.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJh0wGwxdG3jpfAi",
+      "rule": "java:S1126",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 367,
+      "hash": "7a2fc72075011bfa75b451f733e9d618",
+      "textRange": {
+        "startLine": 367,
+        "endLine": 367,
+        "startOffset": 2,
+        "endOffset": 4
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this if-then-else statement by a single return statement.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJgBwGwxdG3jpfAL",
+      "rule": "java:S2293",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 122,
+      "hash": "831e5e42af5f131b1f0727eb65687ffc",
+      "textRange": {
+        "startLine": 122,
+        "endLine": 122,
+        "startOffset": 72,
+        "endOffset": 102
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace the type specification in this constructor call with the diamond operator (\"<>\").",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJgBwGwxdG3jpfAM",
+      "rule": "java:S2293",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 124,
+      "hash": "8307544cf134fdd7784af6db6c7000aa",
+      "textRange": {
+        "startLine": 124,
+        "endLine": 124,
+        "startOffset": 65,
+        "endOffset": 88
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace the type specification in this constructor call with the diamond operator (\"<>\").",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJgBwGwxdG3jpfAP",
+      "rule": "java:S3776",
+      "severity": "CRITICAL",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 205,
+      "hash": "79d8eb55bbd3d3dcd45774c9ce2d8dd1",
+      "textRange": {
+        "startLine": 205,
+        "endLine": 205,
+        "startOffset": 21,
+        "endOffset": 31
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 210,
+                "endLine": 210,
+                "startOffset": 2,
+                "endOffset": 4
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 217,
+                "endLine": 217,
+                "startOffset": 4,
+                "endOffset": 6
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 218,
+                "endLine": 218,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 220,
+                "endLine": 220,
+                "startOffset": 6,
+                "endOffset": 10
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 227,
+                "endLine": 227,
+                "startOffset": 5,
+                "endOffset": 10
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 240,
+                "endLine": 240,
+                "startOffset": 5,
+                "endOffset": 10
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 248,
+                "endLine": 248,
+                "startOffset": 5,
+                "endOffset": 10
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 234,
+                "endLine": 234,
+                "startOffset": 4,
+                "endOffset": 6
+              },
+              "msg": "+3 (incl 2 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 234,
+                "endLine": 234,
+                "startOffset": 39,
+                "endOffset": 41
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 237,
+                "endLine": 237,
+                "startOffset": 6,
+                "endOffset": 10
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 251,
+                "endLine": 251,
+                "startOffset": 4,
+                "endOffset": 6
+              },
+              "msg": "+3 (incl 2 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 266,
+                "endLine": 266,
+                "startOffset": 2,
+                "endOffset": 4
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "brain-overload"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJgBwGwxdG3jpfAO",
+      "rule": "java:S2259",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 266,
+      "hash": "e507ec50b3d5246fd21d256a44596210",
+      "textRange": {
+        "startLine": 266,
+        "endLine": 266,
+        "startOffset": 53,
+        "endOffset": 83
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 266,
+                "endLine": 266,
+                "startOffset": 53,
+                "endOffset": 83
+              },
+              "msg": "'transaction' is dereferenced.",
+              "msgFormattings": []
+            },
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 209,
+                "endLine": 209,
+                "startOffset": 2,
+                "endOffset": 33
+              },
+              "msg": "Implies 'transaction' is null.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "A \"NullPointerException\" could be thrown; \"transaction\" is nullable here.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "cert",
+        "cwe"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJgCwGwxdG3jpfAQ",
+      "rule": "java:S3776",
+      "severity": "CRITICAL",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 273,
+      "hash": "3687094567d168a5c6060e35a8832c10",
+      "textRange": {
+        "startLine": 273,
+        "endLine": 273,
+        "startOffset": 21,
+        "endOffset": 35
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 287,
+                "endLine": 287,
+                "startOffset": 3,
+                "endOffset": 5
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 289,
+                "endLine": 289,
+                "startOffset": 4,
+                "endOffset": 6
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 290,
+                "endLine": 290,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 293,
+                "endLine": 293,
+                "startOffset": 11,
+                "endOffset": 13
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 301,
+                "endLine": 301,
+                "startOffset": 5,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 307,
+                "endLine": 307,
+                "startOffset": 4,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 319,
+                "endLine": 319,
+                "startOffset": 4,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 325,
+                "endLine": 325,
+                "startOffset": 4,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 313,
+                "endLine": 313,
+                "startOffset": 3,
+                "endOffset": 5
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 313,
+                "endLine": 313,
+                "startOffset": 38,
+                "endOffset": 40
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 316,
+                "endLine": 316,
+                "startOffset": 5,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 328,
+                "endLine": 328,
+                "startOffset": 3,
+                "endOffset": 5
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+              "textRange": {
+                "startLine": 341,
+                "endLine": 341,
+                "startOffset": 2,
+                "endOffset": 4
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+      "effort": "6min",
+      "debt": "6min",
+      "author": "",
+      "tags": [
+        "brain-overload"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJgBwGwxdG3jpfAN",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 352,
+      "hash": "41639ffdf856c239a0efd92eac3b2e28",
+      "textRange": {
+        "startLine": 352,
+        "endLine": 357,
+        "startOffset": 23,
+        "endOffset": 89
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"gpApiConfig\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhZwGwxdG3jpfAT",
+      "rule": "java:S116",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 37,
+      "hash": "c97e3d265417d23fec015722c7de0759",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 16,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename this field \"VALID_IP_ADDRESS\" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhZwGwxdG3jpfAU",
+      "rule": "java:S1172",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 39,
+      "hash": "0c4b706671c3d24a0df93317da825029",
+      "textRange": {
+        "startLine": 39,
+        "endLine": 39,
+        "startOffset": 42,
+        "endOffset": 62
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused method parameter \"xHSBCGlobalChannelId\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhZwGwxdG3jpfAV",
+      "rule": "java:S1940",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 116,
+      "hash": "b48453c6b9c199af4879f82bbc1bced9",
+      "textRange": {
+        "startLine": 116,
+        "endLine": 116,
+        "startOffset": 7,
+        "endOffset": 46
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the opposite operator (\">\") instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhZwGwxdG3jpfAW",
+      "rule": "java:S1940",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 158,
+      "hash": "79ebe0bd5e905bd547138cdb63746815",
+      "textRange": {
+        "startLine": 158,
+        "endLine": 158,
+        "startOffset": 7,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the opposite operator (\">\") instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhZwGwxdG3jpfAX",
+      "rule": "java:S1940",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 182,
+      "hash": "59d7c5ec0dac6dd807605efef7abad05",
+      "textRange": {
+        "startLine": 182,
+        "endLine": 182,
+        "startOffset": 7,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the opposite operator (\">\") instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhZwGwxdG3jpfAY",
+      "rule": "java:S1940",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 195,
+      "hash": "9698e8ed39463d090bdb19012b653358",
+      "textRange": {
+        "startLine": 195,
+        "endLine": 195,
+        "startOffset": 7,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the opposite operator (\">\") instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhZwGwxdG3jpfAZ",
+      "rule": "java:S1940",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 208,
+      "hash": "db4e1033d7462c0f8cdb1b6c0c81f17f",
+      "textRange": {
+        "startLine": 208,
+        "endLine": 208,
+        "startOffset": 7,
+        "endOffset": 39
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the opposite operator (\">\") instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhZwGwxdG3jpfAa",
+      "rule": "java:S1940",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 221,
+      "hash": "9c4606824c691a6c3526e024169554e0",
+      "textRange": {
+        "startLine": 221,
+        "endLine": 221,
+        "startOffset": 7,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the opposite operator (\">\") instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhawGwxdG3jpfAb",
+      "rule": "java:S1940",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 246,
+      "hash": "3a9fdb113774d500e756aed01d44b780",
+      "textRange": {
+        "startLine": 246,
+        "endLine": 246,
+        "startOffset": 7,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the opposite operator (\">\") instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJhawGwxdG3jpfAc",
+      "rule": "java:S1940",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 273,
+      "hash": "854bfa5b97430398c93285457c3bca11",
+      "textRange": {
+        "startLine": 273,
+        "endLine": 273,
+        "startOffset": 7,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the opposite operator (\">\") instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJiHwGwxdG3jpfAj",
+      "rule": "java:S1172",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/VoidRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 37,
+      "hash": "b68e39fbed02e13b0c7e2f83e9f53fba",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 33,
+        "endOffset": 53
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused method parameter \"xHSBCGlobalChannelId\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJiHwGwxdG3jpfAk",
+      "rule": "java:S1612",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/VoidRequestValidationService.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 60,
+      "hash": "21fdfc26a0217a0b6fd64736bc4ee98f",
+      "textRange": {
+        "startLine": 60,
+        "endLine": 60,
+        "startOffset": 7,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this lambda with method reference 'request::getGpTransactionId'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "java8"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJi4wGwxdG3jpfAm",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/VoidTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 219,
+      "hash": "41639ffdf856c239a0efd92eac3b2e28",
+      "textRange": {
+        "startLine": 219,
+        "endLine": 224,
+        "startOffset": 23,
+        "endOffset": 89
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"gpApiConfig\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJi4wGwxdG3jpfAn",
+      "rule": "java:S1126",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/VoidTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 281,
+      "hash": "7b8a0eac9c0dec6091873070203e20de",
+      "textRange": {
+        "startLine": 281,
+        "endLine": 281,
+        "startOffset": 2,
+        "endOffset": 4
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this if-then-else statement by a single return statement.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJi4wGwxdG3jpfAo",
+      "rule": "java:S3252",
+      "severity": "CRITICAL",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/VoidTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 315,
+      "hash": "0eb630bffad988765feb0d5af3352d9b",
+      "textRange": {
+        "startLine": 315,
+        "endLine": 315,
+        "startOffset": 30,
+        "endOffset": 42
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use static access with \"com.alibaba.fastjson.JSON\" for \"toJSONString\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "confusing"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJi4wGwxdG3jpfAp",
+      "rule": "java:S1126",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/VoidTransactionApiDelegateImpl.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 322,
+      "hash": "7a2fc72075011bfa75b451f733e9d618",
+      "textRange": {
+        "startLine": 322,
+        "endLine": 322,
+        "startOffset": 2,
+        "endOffset": 4
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this if-then-else statement by a single return statement.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJZ2wGwxdG3jpe_u",
+      "rule": "java:S5853",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/CreditToCardControllerTest.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 87,
+      "hash": "8b820de99165c6241ad271381e1c79a5",
+      "textRange": {
+        "startLine": 87,
+        "endLine": 87,
+        "startOffset": 13,
+        "endOffset": 23
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/CreditToCardControllerTest.java",
+              "textRange": {
+                "startLine": 88,
+                "endLine": 88,
+                "startOffset": 13,
+                "endOffset": 23
+              },
+              "msg": "Other assertThat",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Join these multiple assertions subject to one assertion chain.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "assertj",
+        "tests"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJbhwGwxdG3jpe_x",
+      "rule": "java:S5853",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/RefundTransactionControllerTest.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 85,
+      "hash": "8b820de99165c6241ad271381e1c79a5",
+      "textRange": {
+        "startLine": 85,
+        "endLine": 85,
+        "startOffset": 13,
+        "endOffset": 23
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/RefundTransactionControllerTest.java",
+              "textRange": {
+                "startLine": 86,
+                "endLine": 86,
+                "startOffset": 13,
+                "endOffset": 23
+              },
+              "msg": "Other assertThat",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Join these multiple assertions subject to one assertion chain.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "assertj",
+        "tests"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJa-wGwxdG3jpe_v",
+      "rule": "java:S5853",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/TransactionControllerTest.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 85,
+      "hash": "8b820de99165c6241ad271381e1c79a5",
+      "textRange": {
+        "startLine": 85,
+        "endLine": 85,
+        "startOffset": 13,
+        "endOffset": 23
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/TransactionControllerTest.java",
+              "textRange": {
+                "startLine": 86,
+                "endLine": 86,
+                "startOffset": 13,
+                "endOffset": 23
+              },
+              "msg": "Other assertThat",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Join these multiple assertions subject to one assertion chain.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "assertj",
+        "tests"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJbTwGwxdG3jpe_w",
+      "rule": "java:S5853",
+      "severity": "MINOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/VoidTransactionControllerTest.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 85,
+      "hash": "8b820de99165c6241ad271381e1c79a5",
+      "textRange": {
+        "startLine": 85,
+        "endLine": 85,
+        "startOffset": 13,
+        "endOffset": 23
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/VoidTransactionControllerTest.java",
+              "textRange": {
+                "startLine": 86,
+                "endLine": 86,
+                "startOffset": 13,
+                "endOffset": 23
+              },
+              "msg": "Other assertThat",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Join these multiple assertions subject to one assertion chain.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "assertj",
+        "tests"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AYiLoJcbwGwxdG3jpe_y",
+      "rule": "java:S5961",
+      "severity": "MAJOR",
+      "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+      "project": "com.hsbc.group.tfx.das.transaction",
+      "line": 99,
+      "hash": "f3e50aaa0fa28ac36917e3a23cedfce2",
+      "textRange": {
+        "startLine": 99,
+        "endLine": 99,
+        "startOffset": 13,
+        "endOffset": 21
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 100,
+                "endLine": 100,
+                "startOffset": 2,
+                "endOffset": 52
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 101,
+                "endLine": 101,
+                "startOffset": 2,
+                "endOffset": 63
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 102,
+                "endLine": 102,
+                "startOffset": 2,
+                "endOffset": 87
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 103,
+                "endLine": 103,
+                "startOffset": 2,
+                "endOffset": 67
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 104,
+                "endLine": 104,
+                "startOffset": 2,
+                "endOffset": 80
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 105,
+                "endLine": 105,
+                "startOffset": 2,
+                "endOffset": 64
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 106,
+                "endLine": 106,
+                "startOffset": 2,
+                "endOffset": 67
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 107,
+                "endLine": 107,
+                "startOffset": 2,
+                "endOffset": 87
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 108,
+                "endLine": 108,
+                "startOffset": 2,
+                "endOffset": 65
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 109,
+                "endLine": 109,
+                "startOffset": 2,
+                "endOffset": 67
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 110,
+                "endLine": 110,
+                "startOffset": 2,
+                "endOffset": 68
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 111,
+                "endLine": 111,
+                "startOffset": 2,
+                "endOffset": 68
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 112,
+                "endLine": 112,
+                "startOffset": 2,
+                "endOffset": 67
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 113,
+                "endLine": 113,
+                "startOffset": 2,
+                "endOffset": 69
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 114,
+                "endLine": 114,
+                "startOffset": 2,
+                "endOffset": 75
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 115,
+                "endLine": 115,
+                "startOffset": 2,
+                "endOffset": 69
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 116,
+                "endLine": 116,
+                "startOffset": 2,
+                "endOffset": 88
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 117,
+                "endLine": 117,
+                "startOffset": 2,
+                "endOffset": 75
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 118,
+                "endLine": 118,
+                "startOffset": 2,
+                "endOffset": 80
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 119,
+                "endLine": 119,
+                "startOffset": 2,
+                "endOffset": 75
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 120,
+                "endLine": 120,
+                "startOffset": 2,
+                "endOffset": 72
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 121,
+                "endLine": 121,
+                "startOffset": 2,
+                "endOffset": 75
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 122,
+                "endLine": 122,
+                "startOffset": 2,
+                "endOffset": 63
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 123,
+                "endLine": 123,
+                "startOffset": 2,
+                "endOffset": 80
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 124,
+                "endLine": 124,
+                "startOffset": 2,
+                "endOffset": 68
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 125,
+                "endLine": 125,
+                "startOffset": 2,
+                "endOffset": 82
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 126,
+                "endLine": 126,
+                "startOffset": 2,
+                "endOffset": 81
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 127,
+                "endLine": 127,
+                "startOffset": 2,
+                "endOffset": 85
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 128,
+                "endLine": 128,
+                "startOffset": 2,
+                "endOffset": 89
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 129,
+                "endLine": 129,
+                "startOffset": 2,
+                "endOffset": 73
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 130,
+                "endLine": 130,
+                "startOffset": 2,
+                "endOffset": 76
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 131,
+                "endLine": 131,
+                "startOffset": 2,
+                "endOffset": 73
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 132,
+                "endLine": 132,
+                "startOffset": 2,
+                "endOffset": 74
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 133,
+                "endLine": 133,
+                "startOffset": 2,
+                "endOffset": 77
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 134,
+                "endLine": 134,
+                "startOffset": 2,
+                "endOffset": 59
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 135,
+                "endLine": 135,
+                "startOffset": 2,
+                "endOffset": 81
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 136,
+                "endLine": 136,
+                "startOffset": 2,
+                "endOffset": 73
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 137,
+                "endLine": 137,
+                "startOffset": 2,
+                "endOffset": 79
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 138,
+                "endLine": 138,
+                "startOffset": 2,
+                "endOffset": 71
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 139,
+                "endLine": 139,
+                "startOffset": 2,
+                "endOffset": 69
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 140,
+                "endLine": 140,
+                "startOffset": 2,
+                "endOffset": 75
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 141,
+                "endLine": 141,
+                "startOffset": 2,
+                "endOffset": 78
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+              "textRange": {
+                "startLine": 142,
+                "endLine": 142,
+                "startOffset": 2,
+                "endOffset": 80
+              },
+              "msg": "Assertion",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor this method to reduce the number of assertions from 43 to less than 25.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "",
+      "tags": [
+        "tests"
+      ],
+      "creationDate": "2023-06-05T20:54:57+0800",
+      "updateDate": "2023-06-05T20:54:57+0800",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    }
+  ],
+  "components": [
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/VoidTransactionApiDelegateImpl.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "VoidTransactionApiDelegateImpl.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/impl/VoidTransactionApiDelegateImpl.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/impl/VoidTransactionApiDelegateImpl.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/VoidRequestValidationService.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "VoidRequestValidationService.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/impl/VoidRequestValidationService.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/impl/VoidRequestValidationService.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardReqValidationService.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CreditToCardReqValidationService.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardReqValidationService.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardReqValidationService.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/TransactionApplication.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "TransactionApplication.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/TransactionApplication.java",
+      "path": "src/main/java/com/hsbc/das/transaction/TransactionApplication.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/GpPaymentService.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "GpPaymentService.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/GpPaymentService.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/GpPaymentService.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/model/AuthorizationData.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "AuthorizationData.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/model/AuthorizationData.java",
+      "path": "src/main/java/com/hsbc/das/transaction/model/AuthorizationData.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/CreditToCardApi.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CreditToCardApi.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/controller/CreditToCardApi.java",
+      "path": "src/main/java/com/hsbc/das/transaction/controller/CreditToCardApi.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CreditToCardApiDelegateImpl.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/impl/CreditToCardApiDelegateImpl.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/RefundTransactionApi.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "RefundTransactionApi.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/controller/RefundTransactionApi.java",
+      "path": "src/main/java/com/hsbc/das/transaction/controller/RefundTransactionApi.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/VoidTransactionApi.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "VoidTransactionApi.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/controller/VoidTransactionApi.java",
+      "path": "src/main/java/com/hsbc/das/transaction/controller/VoidTransactionApi.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "TransactionRequestValidationService.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/impl/TransactionRequestValidationService.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "RefundTransactionApiDelegateImpl.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/impl/RefundTransactionApiDelegateImpl.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "TransactionApiDelegateImpl.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/impl/TransactionApiDelegateImpl.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/service/impl/RefundRequestValidationService.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "RefundRequestValidationService.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/service/impl/RefundRequestValidationService.java",
+      "path": "src/main/java/com/hsbc/das/transaction/service/impl/RefundRequestValidationService.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/TransactionControllerTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "TransactionControllerTest.java",
+      "longName": "src/test/java/com/hsbc/das/transaction/controller/TransactionControllerTest.java",
+      "path": "src/test/java/com/hsbc/das/transaction/controller/TransactionControllerTest.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "AuthorizationDataTest.java",
+      "longName": "src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java",
+      "path": "src/test/java/com/hsbc/das/transaction/model/AuthorizationDataTest.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/CreditToCardControllerTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "CreditToCardControllerTest.java",
+      "longName": "src/test/java/com/hsbc/das/transaction/controller/CreditToCardControllerTest.java",
+      "path": "src/test/java/com/hsbc/das/transaction/controller/CreditToCardControllerTest.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/jpa/config/DataSourceConfig.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "DataSourceConfig.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/jpa/config/DataSourceConfig.java",
+      "path": "src/main/java/com/hsbc/das/transaction/jpa/config/DataSourceConfig.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/TransactionApi.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "TransactionApi.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/controller/TransactionApi.java",
+      "path": "src/main/java/com/hsbc/das/transaction/controller/TransactionApi.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "tfx-gps-transaction-service",
+      "longName": "tfx-gps-transaction-service"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/main/java/com/hsbc/das/transaction/controller/HealthApiController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "HealthApiController.java",
+      "longName": "src/main/java/com/hsbc/das/transaction/controller/HealthApiController.java",
+      "path": "src/main/java/com/hsbc/das/transaction/controller/HealthApiController.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/RefundTransactionControllerTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "RefundTransactionControllerTest.java",
+      "longName": "src/test/java/com/hsbc/das/transaction/controller/RefundTransactionControllerTest.java",
+      "path": "src/test/java/com/hsbc/das/transaction/controller/RefundTransactionControllerTest.java"
+    },
+    {
+      "key": "com.hsbc.group.tfx.das.transaction:src/test/java/com/hsbc/das/transaction/controller/VoidTransactionControllerTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "VoidTransactionControllerTest.java",
+      "longName": "src/test/java/com/hsbc/das/transaction/controller/VoidTransactionControllerTest.java",
+      "path": "src/test/java/com/hsbc/das/transaction/controller/VoidTransactionControllerTest.java"
+    }
+  ],
+  "facets": []
+}

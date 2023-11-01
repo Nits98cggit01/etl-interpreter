@@ -1,0 +1,158 @@
+def python_let_accel(input_path):
+    try:
+        f=open(input_path,"r")
+        filedata=f.read()
+
+        filedata = re.sub('\/\*.+\*\/','',filedata).strip()
+
+        # Write the file out again
+        # with open(input_path, 'w') as file:
+        #     file.write(filedata)
+
+        # for i in r:
+        final_code=''
+        # f = open(input_path, "r")
+        j=filedata
+        l=['&','"',"'",'(']
+        global extra_list
+        extra_list=[]
+        keys=['intnx', 'substr','intck', '%sysevalf','putn','inputn','%qscan','today','date','datetime','month','year','mdy','time','%sysfunc','datepart','%str','%eval','upcase','lowcase','timepart']
+        j=j.replace(';','')
+        lis=j.split('=')
+        lis[1]=lis[1].strip()
+        final_code=final_code+lis[0].split(' ')[1].strip()+'='
+        if(any(key in lis[1].lower() for key in keys)):
+            final_code=final_code+convert_func(lis[1].strip())
+            # print(convert_func(lis[1].strip()))
+        elif('ifc' in j):
+            final_code=final_code+'code need to be converted manually'
+        elif(lis[1].strip()==''):
+            final_code=final_code+'""'
+        elif(lis[1].strip().lower()=='null'):
+            final_code=final_code+'np.nan'
+        elif('||' in lis[1]):
+            lisof=lis[1].split('||')
+            out=''
+            for i in lisof:
+                i=i.replace('&','').replace('.','')
+                out=out+i+'+'
+            final_code=final_code+out[:-1]
+        elif('/'in lis[1]):
+            tem=lis[1]
+            if tem.startswith('"') or tem.startswith("'"):
+                    tem=tem[1:-1]
+            if('&' in tem):
+                tem_lis=re.findall('&[a-zA-Z0-9_]+[.]?',tem)
+                for le in range(len(tem_lis)):
+                    tem_lis[le]=tem_lis[le].replace('&','').replace('.','')
+                tem=re.sub('&[a-zA-Z0-9_]+[.]?','$mac',tem)
+                tem=tem.split('$mac')
+                tem_out=''
+                for ite in range(len(tem)):
+                    if(ite+1!=len(tem)):
+                        if(ite==0):
+                            tem_out=tem_out+'"'+tem[ite]+'"+str('+tem_lis[ite]+')'
+                        else:
+                            tem_out=tem_out+'+"'+tem[ite]+'"+str('+tem_lis[ite]+')'
+                    else:
+                        tem_out=tem_out+'+"'+tem[ite]+'"'   
+            else:
+                tem_out='"'+tem+'"'
+            tem=tem_out.replace('""+','').replace('+""','')        
+            final_code=final_code+tem_out 
+        elif(not(any(j in l for j in lis[1]))):
+            tem=lis[1].split(';')[0]
+            #tem=tem.replace(' ','')
+            tem_list=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+            if(tem.isalpha()):
+                final_code=final_code+'"'+tem+'"'
+            elif(any(i in tem.lower() for i in tem_list)):
+                    final_code=final_code+'"'+tem+'"'
+            elif(((tem.replace('.', '')).replace('-','')).isdigit()):
+                if(tem.count('.')>1):
+                    final_code=final_code+'"'+tem+'"'
+                else:
+                    final_code=final_code+tem
+            else:
+                final_code=final_code+'"'+tem+'"'
+        elif(lis[1].startswith('"')):
+            tem=lis[1]
+            tem=tem.replace('""','"')
+            if('&' in tem):
+                tem=tem.replace('&','')
+                tem=tem.replace('.','')
+            #tem=tem.split(';')[0] 
+            if tem.endswith('"d'):
+                tem=tem[:-1]
+                tem='parser().parse('+tem+')'
+                # print(tem)
+            elif(tem.endswith('dt')):
+                tem=tem[1:-3]
+                if(':' in tem):
+                    tem='datetime.strptime("'+tem+'","%d%b%Y:%H:%M:%S")'
+                else:
+                    tem='datetime.strptime('+tem+',"%d%b%Y:%H:%M:%S")'
+            final_code=final_code+tem   
+        elif(lis[1].startswith("'")):
+            tem=lis[1]
+            #tem=tem.split(';')[0] 
+            tem=tem.replace('\n','') 
+            if(',' in tem):
+                final_code=final_code+'['+tem+']'
+            elif(tem.endswith("'d")):
+                tem=tem[:-1]
+                tem='parser().parse('+tem+')'
+                # print(tem)
+                final_code=final_code+tem
+            elif(tem.endswith("'dt")):
+                tem=tem[1:-3]
+                if(':' in tem):
+                    tem='datetime.strptime("'+tem+'","%d%b%Y:%H:%M:%S")'
+                else:
+                    tem='datetime.strptime('+tem+',"%d%b%Y:%H:%M:%S")'
+            else:
+                final_code=final_code+tem
+        elif(lis[1].startswith("('") and lis[1].count(',')>0):
+            final_code=final_code+tem
+        elif('&' in lis[1]):
+            tem=lis[1].strip()
+            tem_list=re.findall('[&]+[a-zA-Z0-9_]+[.]?',tem)
+            tem2=lis[1].strip()
+            for u in tem_list:
+                tem2=tem2.replace(u,'')
+            if(tem2==''):
+                tem=tem.replace('&','_')
+                tem=tem.replace('.','')  
+                if(tem.startswith('_')):
+                    tem=tem[1:]
+                    if(tem.startswith('_')):
+                        tem=tem[1:]
+            else:
+                tem_lis=re.findall('&[a-zA-Z0-9_]+[.]?',tem)
+                for le in range(len(tem_lis)):
+                    tem_lis[le]=tem_lis[le].replace('&','').replace('.','')
+                tem=re.sub('&[a-zA-Z0-9_]+[.]?','$mac',tem)
+                tem=tem.split('$mac')
+                tem_out=''
+                for ite in range(len(tem)):
+                    if(ite+1!=len(tem)):
+                        if(ite==0):
+                            tem_out=tem_out+'"'+tem[ite]+'"+str('+tem_lis[ite]+')'
+                        else:
+                            tem_out=tem_out+'+"'+tem[ite]+'"+str('+tem_lis[ite]+')'
+                    else:
+                        tem_out=tem_out+'+"'+tem[ite]+'"'
+                # print("tem out:",tem_out)
+                tem=tem_out.replace('""+','').replace('+""','')
+            final_code=final_code+tem
+        else:
+            final_code=final_code+'code need to be converted manually'
+        if extra_list!=[]:
+            for i in extra_list:
+                final_code=i+final_code+'\n'
+            f.close()
+        if ("code need to be converted manually") in final_code:
+            final_code="#These lines should be converted manually for "+input_path.split("_")[-2]+"\n"+filedata.strip()
+        return final_code
+    except Exception as e:
+        return None

@@ -1,0 +1,80 @@
+Consideration for AI generated text
+
+1. Linguistic Analysis:
+   - Language Complexity: AI-generated text can exhibit highly complex or overly formal language, as the model tends to mimic text patterns from its training data.
+   - Idioms and Slang: Human-generated content is more likely to contain colloquialisms, idioms, or region-specific slang.
+   - Grammatical Errors: AI models are generally proficient in grammar, whereas humans may make typographical or grammatical errors.
+
+2. Contextual Understanding:
+   - Logical Coherence: AI-generated text may lack logical coherence or context, whereas humans often provide context that relates to their personal experiences.
+   - Ambiguity Handling: Human-generated content may be more adept at resolving ambiguities or providing nuanced interpretations of context.
+
+3. Creativity and Originality:
+   - Repetition and Plagiarism: AI-generated text might inadvertently repeat phrases or plagiarize content from its training data. Humans usually produce original content.
+   - Creativity and Novelty: Human-generated content can exhibit more creativity, whereas AI models tend to repackage existing information.
+
+4. Subject Matter Expertise:
+   - Depth of Knowledge: Human-generated content from experts in a field might contain deeper insights and domain-specific knowledge not commonly found in AI-generated text.
+   - Consistency: AI-generated content might provide inconsistent or inaccurate information due to biases in training data or model limitations.
+
+5. Temporal and Cultural Context:
+   - Current Events and Trends: Human-generated content is more likely to reflect recent events or trends, while AI-generated content may be outdated.
+   - Cultural References: Human-generated text may incorporate current cultural references that AI models might not comprehend.
+
+6. Writing Style:
+   - Authorship Traits: Human authors may have distinct writing styles, such as specific vocabulary choices, tone, and writing habits. AI-generated text often lacks this personal touch.
+   - Contextual Variations: Human authors adapt their writing style based on the context, whereas AI models may produce consistent style regardless of context.
+
+7. Evaluation Tools:
+   - Utilizing AI Tools: Several AI tools and models can assist in identifying AI-generated content, but they might not be foolproof.
+   - Language Models: Employ pre-trained language models to analyze text for characteristics consistent with AI-generated content, such as the presence of "hallmark" phrases used by these models.
+
+8. Training Data and Model Artifacts:
+   - Identifying GPT-3, GPT-4, or Other Models: AI-generated text might contain metadata or model-specific characteristics that can be used to identify the model responsible.
+   - Training Data Anomalies: Examine the text for unusual patterns or biases that are indicative of the AI model's training data.
+
+9. Author Interaction:
+   - Direct Queries: Engage with the author to ask clarifying questions or request information not typically found in AI-generated content.
+
+10. Contextual Red Flags:
+    - Content in Unusual Locations: Consider whether the content is found on websites or forums where AI-generated text is prevalent.
+    - Automated Account Signatures: Analyze for telltale signs of automated signatures or repetitive behaviors.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Criteria for Gen AI use case
+
+-> Grammatical error
+-> Out of the context
+-> Spelling error
+-> Unwanted use of abbreviations
+-> Punctuation marks
+-> Inconsistency of content flow
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1) Shenbagam
+
+India at Asian games 2023
+Evolution of Generative AI
+Women empowerment
+Child labor
+Metro rail projects in India
+
+2) Ayush
+
+ICC Cricket World Cup 2023 Comes to India
+The Magnificent Statue of Sardar Patel in India
+The Remarkable Growth of Information Technology in India
+Traffic in India
+The Dynamics of Exports in India
+
+3) Rohan
+
+The Textile Industry in India
+Indian Graduates Embark on Higher Studies Worldwide
+Medical Advancements That Have Transformed Healthcare
+Reflections on the Value of Existence
+The Imperative of Water Treatment
+
+
+
